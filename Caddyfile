@@ -1,0 +1,33 @@
+# Railway runs Caddy to serve this static site when it sees a Caddyfile.
+# Mirrors the Parascand Notary deployment pattern.
+# Listens on the $PORT Railway provides; serves from the repo root.
+
+:{$PORT} {
+	root * .
+	file_server
+	encode gzip zstd
+	try_files {path} {path}/ /index.html
+
+	# Sensible defaults
+	header {
+		?Cache-Control "public, max-age=3600"
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		X-Frame-Options "SAMEORIGIN"
+		Permissions-Policy "geolocation=(), microphone=(), camera=()"
+	}
+
+	# Strip .html so /voice-ai works as well as /voice-ai.html
+	@html_redirect {
+		path_regexp html_redir ^/(.+)\.html$
+	}
+	redir @html_redirect /{re.html_redir.1} 301
+
+	# Internally rewrite extensionless requests to their .html file
+	@html_rewrite {
+		not path /
+		not path_regexp \.[a-zA-Z0-9]+$
+	}
+	rewrite @html_rewrite {path}.html
+}

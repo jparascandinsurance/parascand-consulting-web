@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block obvious junk
+Disallow: /tmp/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://parascandconsulting.business/sitemap.xml

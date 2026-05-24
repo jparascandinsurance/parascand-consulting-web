@@ -1,0 +1,23 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+
+# Local previews
+node_modules/
+.cache/
+
+# Logs
+*.log
+
+# Local secrets — never commit
+.env
+.env.local
+*.local
+
+# Deployment artifacts (handled by Railway)
+.railway/

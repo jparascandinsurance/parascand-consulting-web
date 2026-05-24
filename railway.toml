@@ -1,0 +1,16 @@
+# Railway build & deploy configuration for parascandconsulting.business
+# https://docs.railway.app/reference/config-as-code
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+# Caddy reads $PORT from the environment and binds via the Caddyfile.
+healthcheckPath = "/"
+healthcheckTimeout = 30
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+# Optional: assign a custom domain in Railway dashboard to
+# parascandconsulting.business and Railway will provision the TLS cert.

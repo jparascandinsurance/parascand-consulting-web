@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Healthcare AI Voice Agent | HIPAA-Aware Patient Call Handling — Parascand Consulting</title>
+  <meta name="description" content="Patient calls handled with care — at scale. AI voice agent for medical, behavioral health, and specialty practices. HIPAA-aware deployment with BAA-eligible vendors. Appointment scheduling, intake triage, recall, refill requests, and after-hours overflow." />
+  <meta name="keywords" content="HIPAA AI voice agent, healthcare AI receptionist, patient call AI, medical practice voice AI, AI appointment scheduling EHR, AthenaHealth AI, Epic AI integration, eClinicalWorks AI, behavioral health intake AI, BAA voice AI" />
+  <meta name="author" content="Parascand Consulting LLC" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="theme-color" content="#0F3A66" />
+  <link rel="canonical" href="https://parascandconsulting.business/healthcare" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://parascandconsulting.business/healthcare" />
+  <meta property="og:site_name" content="Parascand Consulting" />
+  <meta property="og:title" content="Healthcare Voice AI — Parascand Consulting" />
+  <meta property="og:description" content="Patient calls handled with care — at scale. HIPAA-aware deployment, BAA-eligible." />
+  <meta property="og:image" content="https://parascandconsulting.business/images/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Healthcare Voice AI — Parascand Consulting" />
+  <meta name="twitter:description" content="Appointment scheduling, intake, recall — AI-handled, HIPAA-aware." />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F3A66'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23C9A961'%3EP%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AI Voice Agent for Healthcare Practices (HIPAA-aware)",
+    "provider": { "@type": "Organization", "name": "Parascand Consulting LLC", "url": "https://parascandconsulting.business/" },
+    "areaServed": "United States",
+    "description": "HIPAA-aware AI voice agent for medical, behavioral health, dental, and specialty practices. Patient scheduling, intake triage, recall, refill requests, after-hours overflow. Deployed with BAA-eligible voice/LLM vendors. Setup from $1,499; monthly from $799.",
+    "offers": [ { "@type": "Offer", "name": "Healthcare Voice AI — Growth", "price": "799", "priceCurrency": "USD" } ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is this HIPAA compliant?", "acceptedAnswer": { "@type": "Answer", "text": "HIPAA compliance is a posture, not a checkbox — and it lives at the deployment, not the technology. We deploy on BAA-eligible voice and LLM vendors (Twilio with BAA, OpenAI Enterprise with BAA, Anthropic Enterprise where applicable). We sign a BAA with your practice. PHI handling is configured per workflow — minimum necessary, logged access, encryption at rest and in transit. We are not a HIPAA-certifying body; we operationalize against the rules." } },
+      { "@type": "Question", "name": "Which EHRs do you integrate with?", "acceptedAnswer": { "@type": "Answer", "text": "Athena, eClinicalWorks, Practice Fusion, Kareo / Tebra, DrChrono, NextGen, Greenway, Allscripts, and Epic (via App Orchard partnership or a webhook bridge). For PMS-side dental work see our /dental page. If your EHR has an API or HL7/FHIR endpoint, we can integrate." } },
+      { "@type": "Question", "name": "Can the agent triage clinical complaints?", "acceptedAnswer": { "@type": "Answer", "text": "Triage is configurable but conservative by design. The agent identifies red-flag symptoms from your protocol list (chest pain, suicidal ideation, severe bleeding, stroke signs) and escalates immediately — to 911 if you authorize that script, otherwise to your on-call. We do not let the agent give clinical advice; it confirms appointments, asks intake questions you write, and routes." } },
+      { "@type": "Question", "name": "What about behavioral / mental health calls?", "acceptedAnswer": { "@type": "Answer", "text": "Behavioral health is one of our specialty deployments. We script for crisis-line escalation (988), warm handoff to your on-call clinician, intake screening (PHQ-9, GAD-7 if your practice uses them), and never let the agent attempt counseling. Many behavioral health practices use us for after-hours intake intake-form completion only — clinical contact is human." } },
+      { "@type": "Question", "name": "Will patients know they're talking to AI?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — disclosure is in the greeting by default, e.g. \"You've reached the after-hours scheduling assistant for [Practice]. I'm an automated assistant — I can book appointments and answer common questions, or transfer you to our on-call clinician.\" Several states require AI disclosure; we configure to the strictest applicable rule." } },
+      { "@type": "Question", "name": "Multilingual?", "acceptedAnswer": { "@type": "Answer", "text": "English and Spanish included. Other languages on request (Mandarin, Vietnamese, Arabic, French, Russian and others have been deployed). Interpreter-line warm transfer is also supported for languages we don't voice directly." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav">
+    <a href="index.html" class="nav-logo" aria-label="Parascand Consulting — Home">
+      <img src="images/parascand-consulting-logo.jpg" alt="Parascand Consulting logo" />
+      <div class="brand">Parascand Consulting<small>AI for Small Business</small></div>
+    </a>
+    <nav class="nav-menu" id="navMenu">
+      <a href="services.html">Services</a>
+      <a href="voice-ai.html">Voice AI</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="tel:+15713323829" class="nav-phone hide-mobile">(571) 332-3829</a>
+      <a href="contact.html" class="btn-cta-nav">Book a Fit Call</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navMenu').classList.toggle('open')"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B4F8C" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Vertical · Healthcare</span>
+        <h1>Patient calls handled with care<br/>— at scale.</h1>
+        <p class="lede">Your front desk is drowning. Recall calls don't get made. After-hours patients get voicemail. We deploy a HIPAA-aware AI voice agent that handles scheduling, intake, refills, and recall — and escalates the moment a call needs a human or a clinician.</p>
+        <div class="btn-row">
+          <a href="#pricing" class="btn btn-primary btn-large">See pricing</a>
+          <a href="contact.html" class="btn btn-secondary btn-large">Book a fit call</a>
+        </div>
+        <p class="muted" style="margin-top:1.25rem;font-size:0.9rem;">Deployed with BAA-eligible voice and LLM vendors. Mutual BAA signed with your practice.</p>
+      </div>
+      <aside class="hero-card">
+        <h4>Patient call log — today</h4>
+        <svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Patient call log mockup" style="width:100%;height:auto;border-radius:10px;border:1px solid #E5DFD0;background:#FBF7EE;">
+          <defs><linearGradient id="hch" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0F3A66"/><stop offset="1" stop-color="#1B4F8C"/></linearGradient></defs>
+          <rect x="0" y="0" width="600" height="42" fill="url(#hch)"/>
+          <text x="20" y="27" font-family="Inter,sans-serif" font-size="14" font-weight="600" fill="#F5EFE2">Patient Call Log · Today</text>
+          <text x="500" y="27" font-family="Inter,sans-serif" font-size="11" fill="#B7D3E8">PHI redacted view</text>
+          <!-- header row -->
+          <rect x="0" y="42" width="600" height="28" fill="#F5EFE2"/>
+          <text x="14" y="60" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#6B7480">TIME</text>
+          <text x="80" y="60" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#6B7480">PATIENT</text>
+          <text x="200" y="60" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#6B7480">REASON</text>
+          <text x="360" y="60" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#6B7480">OUTCOME</text>
+          <text x="510" y="60" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#6B7480">STATUS</text>
+          <!-- rows -->
+          <g font-family="Inter,sans-serif" font-size="11" fill="#1A2230">
+            <rect x="0" y="74" width="600" height="34" fill="#FFFDF8"/>
+            <text x="14" y="94">07:42</text><text x="80" y="94">M*** R***</text><text x="200" y="94">Annual physical</text><text x="360" y="94">Booked · 06/12</text>
+            <rect x="500" y="82" width="80" height="16" rx="3" fill="#2F6E4F"/><text x="540" y="93" font-size="9" font-weight="600" fill="#F5EFE2" text-anchor="middle">SCHEDULED</text>
+
+            <rect x="0" y="108" width="600" height="34" fill="#F5EFE2"/>
+            <text x="14" y="128">08:11</text><text x="80" y="128">D*** L***</text><text x="200" y="128">Rx refill (lisinopril)</text><text x="360" y="128">Sent to MA queue</text>
+            <rect x="500" y="116" width="80" height="16" rx="3" fill="#5EA1D1"/><text x="540" y="127" font-size="9" font-weight="600" fill="#F5EFE2" text-anchor="middle">ROUTED</text>
+
+            <rect x="0" y="142" width="600" height="34" fill="#FFFDF8"/>
+            <text x="14" y="162">08:34</text><text x="80" y="162">J*** K***</text><text x="200" y="162">Chest pain · 53M</text><text x="360" y="162">911 prompted · on-call</text>
+            <rect x="500" y="150" width="80" height="16" rx="3" fill="#B85C3B"/><text x="540" y="161" font-size="9" font-weight="600" fill="#F5EFE2" text-anchor="middle">ESCALATED</text>
+
+            <rect x="0" y="176" width="600" height="34" fill="#F5EFE2"/>
+            <text x="14" y="196">09:02</text><text x="80" y="196">P*** N***</text><text x="200" y="196">Reschedule · 06/04 → 06/11</text><text x="360" y="196">Done in EHR</text>
+            <rect x="500" y="184" width="80" height="16" rx="3" fill="#2F6E4F"/><text x="540" y="195" font-size="9" font-weight="600" fill="#F5EFE2" text-anchor="middle">SCHEDULED</text>
+
+            <rect x="0" y="210" width="600" height="34" fill="#FFFDF8"/>
+            <text x="14" y="230">09:17</text><text x="80" y="230">L*** T***</text><text x="200" y="230">New patient intake</text><text x="360" y="230">Intake form · sent SMS</text>
+            <rect x="500" y="218" width="80" height="16" rx="3" fill="#C9A961"/><text x="540" y="229" font-size="9" font-weight="600" fill="#1A2230" text-anchor="middle">INTAKE</text>
+
+            <rect x="0" y="244" width="600" height="34" fill="#F5EFE2"/>
+            <text x="14" y="264">09:31</text><text x="80" y="264">A*** V***</text><text x="200" y="264">Insurance question</text><text x="360" y="264">FAQ answered</text>
+            <rect x="500" y="252" width="80" height="16" rx="3" fill="#9AA2AE"/><text x="540" y="263" font-size="9" font-weight="600" fill="#F5EFE2" text-anchor="middle">RESOLVED</text>
+
+            <rect x="0" y="278" width="600" height="34" fill="#FFFDF8"/>
+            <text x="14" y="298">09:48</text><text x="80" y="298">R*** B***</text><text x="200" y="298">Recall · 6-mo follow-up</text><text x="360" y="298">Booked · 06/19</text>
+            <rect x="500" y="286" width="80" height="16" rx="3" fill="#2F6E4F"/><text x="540" y="297" font-size="9" font-weight="600" fill="#F5EFE2" text-anchor="middle">SCHEDULED</text>
+
+            <rect x="0" y="312" width="600" height="34" fill="#F5EFE2"/>
+            <text x="14" y="332">10:04</text><text x="80" y="332">S*** H***</text><text x="200" y="332">Behavioral · anxiety</text><text x="360" y="332">Warm transfer · clinician</text>
+            <rect x="500" y="320" width="80" height="16" rx="3" fill="#B85C3B"/><text x="540" y="331" font-size="9" font-weight="600" fill="#F5EFE2" text-anchor="middle">ESCALATED</text>
+          </g>
+          <rect x="0" y="384" width="600" height="36" fill="#F5EFE2"/>
+          <text x="20" y="406" font-family="Inter,sans-serif" font-size="11" fill="#0F3A66">8 calls · 4 scheduled · 2 escalated · avg handle 2m 11s · all PHI access logged</text>
+        </svg>
+        <p class="muted" style="font-size: 0.85rem; margin-top: 1rem;">Illustrative — names redacted. Your deployment writes to your EHR.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <span>Athena</span><span class="trust-divider"></span>
+    <span>eClinicalWorks</span><span class="trust-divider"></span>
+    <span>Tebra / Kareo</span><span class="trust-divider"></span>
+    <span>DrChrono</span><span class="trust-divider"></span>
+    <span>Epic (via App Orchard)</span><span class="trust-divider"></span>
+    <span>HL7 / FHIR</span>
+  </div>
+</div>
+
+<!-- COMPLIANCE CALL-OUT -->
+<section class="cream">
+  <div class="container">
+    <div class="callout">
+      <div>
+        <span class="eyebrow">Compliance posture</span>
+        <h2>HIPAA-aware. BAA-eligible. Operationalized — not just claimed.</h2>
+        <p>HIPAA compliance is a deployment posture, not a checkbox. Here is how we operationalize it for every healthcare engagement:</p>
+        <ul>
+          <li><strong>BAAs with subprocessors.</strong> Voice (Twilio under BAA), LLM (OpenAI Enterprise or Anthropic with applicable BAA), transcription, recording storage — all on BAA-eligible plans before a single PHI call is taken.</li>
+          <li><strong>Mutual BAA with your practice.</strong> Signed before deployment. Subprocessor list disclosed and updated.</li>
+          <li><strong>Minimum necessary by design.</strong> The agent only collects the PHI the workflow requires. Voice recordings retained 90 days by default, configurable to your policy.</li>
+          <li><strong>Encryption + access logs.</strong> At rest (AES-256) and in transit (TLS 1.2+). Access to recordings and transcripts is logged with user, timestamp, and reason.</li>
+          <li><strong>Escalation by clinical protocol.</strong> Red-flag symptoms (chest pain, SI, stroke signs) route to 911 prompt + on-call clinician per your written protocol — not the AI's judgment.</li>
+          <li><strong>Disclosure in the greeting.</strong> Patients are told they're speaking to an automated assistant, with an immediate path to a human.</li>
+        </ul>
+        <p class="muted">We are not a HIPAA-certifying body and we do not warrant compliance for your practice. We deploy against the rules and provide documentation suitable for your security officer's review.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE TRANSCRIPT -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Sample call</span>
+      <h2>Appointment scheduling — start to finish.</h2>
+      <p>Annual physical scheduling for a returning patient. Identifies, verifies, checks coverage, books, sends prep instructions.</p>
+    </div>
+    <div class="transcript">
+      <div class="t-row"><span class="t-spk ai">AI</span><p>You've reached the scheduling assistant for Cedar Family Medicine. I'm an automated assistant — I can book or change appointments, or transfer you to our nurse line. How can I help?</p></div>
+      <div class="t-row"><span class="t-spk caller">Patient</span><p>I need to schedule my annual physical.</p></div>
+      <div class="t-row"><span class="t-spk ai">AI</span><p>Of course. Can I have your full name and date of birth to pull up your chart?</p></div>
+      <div class="t-row"><span class="t-spk caller">Patient</span><p>Margaret Reyes, December third, nineteen seventy-one.</p></div>
+      <div class="t-row"><span class="t-spk ai">AI</span><p>Thanks, Margaret. I see you here. Last physical was March of last year, so you're due. You're seeing Dr.&nbsp;Park, correct? And your insurance on file is BlueCross — anything change there?</p></div>
+      <div class="t-row"><span class="t-spk caller">Patient</span><p>Same insurance. And yes, Dr. Park.</p></div>
+      <div class="t-row"><span class="t-spk ai">AI</span><p>Dr.&nbsp;Park has Thursday June 12th at 9:40 AM, or Tuesday the 17th at 2:20 PM. Which works better?</p></div>
+      <div class="t-row"><span class="t-spk caller">Patient</span><p>The Thursday morning slot.</p></div>
+      <div class="t-row"><span class="t-spk ai">AI</span><p>Booked — Thursday June 12 at 9:40 AM with Dr.&nbsp;Park. I'll text you a confirmation, the pre-visit form, and the fasting note since this is a physical. Anything else today?</p></div>
+      <div class="t-row"><span class="t-spk caller">Patient</span><p>No, that's it. Thank you.</p></div>
+      <div class="t-row"><span class="t-spk system">System</span><p>Call ended — 1m 58s · Appointment written to Athena · Pre-visit packet sent · Confirmation SMS sent · Access logged</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="cream">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">What it handles</span><h2>The call types your front desk repeats every hour.</h2></div>
+    <div class="services-grid">
+      <article class="service-card"><div class="service-icon">A</div><h3>Scheduling & rescheduling</h3><p>Direct EHR write. Returning and new patients. Provider preference and visit-type rules respected.</p></article>
+      <article class="service-card"><div class="service-icon">I</div><h3>New-patient intake</h3><p>Demographics, insurance, chief complaint. Pre-visit forms sent by SMS or email to complete before arrival.</p></article>
+      <article class="service-card"><div class="service-icon">R</div><h3>Recall & reactivation</h3><p>Outbound recall on your cadence — 6-month, 12-month, gaps in care. Booking direct to the calendar.</p></article>
+      <article class="service-card"><div class="service-icon">F</div><h3>Refill requests</h3><p>Patient identity verification, route to MA queue or e-prescribe workflow per your SOP. Never authorizes meds.</p></article>
+      <article class="service-card"><div class="service-icon">T</div><h3>Clinical triage (protocol-driven)</h3><p>Red-flag symptom detection routes to 911 prompt and on-call. Non-urgent symptoms scheduled to the right visit type.</p></article>
+      <article class="service-card"><div class="service-icon">B</div><h3>Behavioral / after-hours</h3><p>Crisis-line escalation (988), warm clinician transfer, intake-only handling. The AI never attempts counseling.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Pricing</span>
+      <h2>Built for single-clinic and group practices.</h2>
+      <p>Healthcare deployments start at the Growth tier because of the BAA, EHR integration, and escalation-protocol work involved. Starter is available for non-PHI workflows (recall, intake-only) on request.</p>
+    </div>
+    <div class="pricing-grid">
+      <article class="pricing-card">
+        <h3>Starter (non-PHI)</h3>
+        <div class="price">$499<span>setup</span></div>
+        <div class="price-sub">$299/mo · 200 mins · intake or recall only</div>
+        <ul>
+          <li>Intake-form completion (no PHI in voice)</li>
+          <li>Recall / reactivation outbound</li>
+          <li>FAQ + hours + directions</li>
+          <li>No EHR write, no PHI handling</li>
+          <li>Overage $0.15/min</li>
+        </ul>
+        <a href="contact.html" class="btn btn-secondary">Ask about Starter →</a>
+      </article>
+      <article class="pricing-card featured">
+        <div class="ribbon">Most picked</div>
+        <h3>Growth (BAA-backed)</h3>
+        <div class="price">$1,499<span>setup</span></div>
+        <div class="price-sub">$799/mo · 1,000 mins · full clinical flow</div>
+        <ul>
+          <li>BAA-eligible voice + LLM stack</li>
+          <li>EHR integration (Athena, eCW, Tebra, DrChrono, etc.)</li>
+          <li>Clinical-protocol escalation</li>
+          <li>Bilingual EN/ES</li>
+          <li>Access logging, recording retention policy</li>
+          <li>Weekly optimization for first 60 days</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Talk to us →</a>
+      </article>
+      <article class="pricing-card">
+        <h3>Enterprise</h3>
+        <div class="price">Custom</div>
+        <div class="price-sub">Multi-site / health-system</div>
+        <ul>
+          <li>Epic (App Orchard) or HL7/FHIR bridge</li>
+          <li>Multi-clinic routing</li>
+          <li>Custom escalation workflows</li>
+          <li>Security review with your CISO/security officer</li>
+          <li>SLAs and dedicated success manager</li>
+        </ul>
+        <a href="contact.html" class="btn btn-secondary">Request a quote →</a>
+      </article>
+    </div>
+    <p class="muted" style="text-align:center;margin-top:1.5rem;">Pricing in review — final tiers pending principal approval. <a href="contact.html">Ask for a written quote.</a></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="cream">
+  <div class="container container-narrow">
+    <div class="section-head"><span class="eyebrow">FAQ</span><h2>Healthcare questions, answered honestly.</h2></div>
+    <details class="faq-item"><summary>Is this HIPAA compliant?</summary><p>HIPAA compliance is a posture, not a checkbox — and it lives at the deployment, not the technology. We deploy on BAA-eligible voice and LLM vendors and sign a BAA with your practice. PHI handling is configured per workflow — minimum necessary, logged access, encryption at rest and in transit. We are not a HIPAA-certifying body; we operationalize against the rules.</p></details>
+    <details class="faq-item"><summary>Which EHRs do you integrate with?</summary><p>Athena, eClinicalWorks, Practice Fusion, Kareo/Tebra, DrChrono, NextGen, Greenway, Allscripts, and Epic (via App Orchard or webhook bridge). If your EHR has an API or HL7/FHIR endpoint, we can integrate.</p></details>
+    <details class="faq-item"><summary>Can the agent triage clinical complaints?</summary><p>Triage is configurable but conservative by design. The agent identifies red-flag symptoms from your protocol list and escalates immediately. We do not let the agent give clinical advice.</p></details>
+    <details class="faq-item"><summary>Behavioral / mental health calls?</summary><p>We script for 988 crisis-line escalation, warm clinician handoff, and screening (PHQ-9, GAD-7) where the practice uses them. The agent never attempts counseling.</p></details>
+    <details class="faq-item"><summary>Will patients know they're talking to AI?</summary><p>Yes — disclosure is in the greeting by default. Several states require AI disclosure; we configure to the strictest applicable rule.</p></details>
+    <details class="faq-item"><summary>Multilingual?</summary><p>English and Spanish included. Mandarin, Vietnamese, Arabic, French, Russian and others have been deployed. Interpreter-line warm transfer is also supported.</p></details>
+    <details class="faq-item"><summary>What about state laws like CMIA (California) or telephone-recording consent?</summary><p>We configure the deployment to the strictest applicable rule across the states you operate in. Two-party consent states get explicit recording disclosure; one-party states get our standard disclosure. CMIA and similar state laws are reviewed during scoping.</p></details>
+  </div>
+</section>
+
+<section class="navy">
+  <div class="container container-narrow" style="text-align:center;">
+    <h2 style="color:var(--cream);">Talk to a consultant — not a sales engineer.</h2>
+    <p style="color:rgba(245,239,226,0.85);">A 20-minute call. We'll tell you whether this fits your practice, what your security officer will need to see, and whether we'd take the engagement.</p>
+    <div class="btn-row" style="justify-content:center;">
+      <a href="contact.html" class="btn btn-primary btn-large">Book a fit call</a>
+      <a href="tel:+15713323829" class="btn btn-secondary btn-large">Or call (571) 332-3829</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Parascand Consulting</div>
+        <p>The credible consulting firm that does AI.</p>
+        <p style="margin-top:1rem;"><a href="tel:+15713323829">(571) 332-3829</a><br/><a href="mailto:parascandconsulting@gmail.com">parascandconsulting@gmail.com</a></p>
+      </div>
+      <div><h5>Services</h5><ul><li><a href="voice-ai.html">Voice AI Agents</a></li><li><a href="restaurants.html">Restaurant Phone AI</a></li><li><a href="services.html#automation">Workflow Automation</a></li><li><a href="services.html#caio">Fractional CAIO</a></li><li><a href="services.html">All services →</a></li></ul></div>
+      <div><h5>Verticals</h5><ul><li><a href="restaurants.html">Restaurants</a></li><li><a href="dental.html">Dental</a></li><li><a href="real-estate.html">Real Estate</a></li><li><a href="healthcare.html">Healthcare</a></li></ul></div>
+      <div><h5>Firm</h5><ul><li><a href="about.html">About James</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://www.linkedin.com/in/james-parascand" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Parascand Consulting LLC.</span><span>Virginia · Remote-first US</span></div>
+  </div>
+</footer>
+
+
+<!-- GoHighLevel / LeadConnector chat widget -->
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a122bbc294a01e42f078640" data-source="WEB_USER"></script>
+
+</body>
+</html>
