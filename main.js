@@ -1,54 +1,15 @@
 /* =========================================================
    Parascand Consulting — shared interactions
-   Scroll reveal · sticky-header shrink · mobile + dropdown nav · back-to-top
-   Progressive enhancement: if JS fails, all content stays visible.
+   Sticky-header shrink · mobile + dropdown nav · back-to-top
+   NOTE: No scroll-reveal. Content is NEVER hidden by script —
+   all sections are fully visible at all times. Image motion
+   is handled purely in CSS (Ken Burns drift + hover effects).
    ========================================================= */
 (function () {
   "use strict";
-  var root = document.documentElement;
-  root.classList.add("js");
 
   var reduce = window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  /* ---------- Scroll reveal ---------- */
-  function setupReveal() {
-    var selectors = [
-      ".section-head", ".problem-card", ".service-card", ".vertical-block",
-      ".pricing-card", ".process-step", ".founder-block", ".stat",
-      ".callout", ".transcript", ".area-card", ".offer-card",
-      ".stack-table", ".roi-calc", ".demo-audio"
-    ];
-    var els = document.querySelectorAll(selectors.join(","));
-    if (!els.length) return;
-
-    els.forEach(function (el, i) {
-      el.classList.add("reveal");
-      // gentle stagger within groups
-      el.style.transitionDelay = (i % 4) * 70 + "ms";
-    });
-
-    if (reduce || !("IntersectionObserver" in window)) {
-      els.forEach(function (el) { el.classList.add("is-visible"); });
-      return;
-    }
-
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.classList.add("is-visible");
-          io.unobserve(e.target);
-        }
-      });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-
-    els.forEach(function (el) { io.observe(el); });
-
-    // Safety net: reveal everything after 1.4s in case observer never fires.
-    setTimeout(function () {
-      els.forEach(function (el) { el.classList.add("is-visible"); });
-    }, 1400);
-  }
 
   /* ---------- Sticky header shrink ---------- */
   function setupHeader() {
@@ -70,7 +31,6 @@
       toggle.addEventListener("click", function () {
         menu.classList.toggle("open");
       });
-      // close menu after tapping a real link (not the dropdown parent)
       menu.querySelectorAll("a").forEach(function (a) {
         a.addEventListener("click", function () {
           if (!a.closest(".nav-item") || a.closest(".nav-dropdown")) {
@@ -80,7 +40,7 @@
       });
     }
 
-    // Dropdown: hover handles desktop via CSS; click toggles on touch/mobile.
+    // Dropdown: hover handles desktop via CSS; click toggles on mobile.
     document.querySelectorAll(".nav-item > a.has-dropdown").forEach(function (link) {
       link.addEventListener("click", function (ev) {
         var isMobile = window.matchMedia("(max-width: 900px)").matches;
@@ -114,7 +74,6 @@
   }
 
   function init() {
-    setupReveal();
     setupHeader();
     setupNav();
     setupToTop();

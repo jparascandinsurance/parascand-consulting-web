@@ -190,14 +190,10 @@ section.navy a { color: var(--sky-soft); }
 .nav-dropdown a::after { display: none; }
 
 /* =========================================================
-   SCROLL REVEAL (added by main.js)
+   SCROLL REVEAL — REMOVED.
+   Content is never hidden; no opacity/visibility gating.
+   Motion lives on images (Ken Burns) and hover effects only.
    ========================================================= */
-html.js .reveal:not(.is-visible) { opacity: 0; transform: translateY(26px); }
-.reveal {
-  transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
-  will-change: opacity, transform;
-}
-.reveal.is-visible, html.js .reveal.is-visible { opacity: 1; transform: none; }
 
 /* =========================================================
    BACK TO TOP
@@ -221,10 +217,6 @@ html.js .reveal:not(.is-visible) { opacity: 0; transform: translateY(26px); }
 .to-top.show { opacity: 1; visibility: visible; transform: none; }
 .to-top:hover { background: var(--navy-deep); }
 
-@media (prefers-reduced-motion: reduce) {
-  html.js .reveal, html.js .reveal:not(.is-visible) { opacity: 1 !important; transform: none !important; }
-  .reveal { transition: none; }
-}
 
 /* =========================================================
    BUTTONS
