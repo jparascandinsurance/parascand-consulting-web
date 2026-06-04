@@ -32,13 +32,26 @@
       <div class="brand">Parascand Consulting<small>AI for Small Business</small></div>
     </a>
     <nav class="nav-menu" id="navMenu">
-      <a href="services.html">Services</a>
-      <a href="voice-ai.html">Voice AI</a>
-      <a href="restaurants.html">Restaurants</a>
+      <div class="nav-item">
+        <a href="services.html" class="has-dropdown">Services
+          <svg class="nav-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="voice-ai.html">Voice AI Agents</a>
+          <a href="restaurants.html">Restaurant Phone AI</a>
+          <a href="automation.html">Workflow Automation</a>
+          <a href="dental.html">Dental</a>
+          <a href="real-estate.html">Real Estate</a>
+          <a href="healthcare.html">Healthcare</a>
+          <a href="services.html">All Services →</a>
+        </div>
+      </div>
+      <a href="pricing.html">Pricing</a>
+      <a href="service-areas.html">Service Areas</a>
       <a href="about.html">About</a>
       <a href="faq.html">FAQ</a>
       <a href="tel:+15713323829" class="nav-phone hide-mobile">(571) 332-3829</a>
-      <a href="contact.html" class="btn-cta-nav">Book a Fit Call</a>
+      <a href="contact.html" class="btn-cta-nav">Book a Free Call</a>
     </nav>
     <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navMenu').classList.toggle('open')"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B4F8C" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
   </div>
@@ -66,14 +79,14 @@
     <div class="services-grid">
       <article class="service-card featured" id="voice">
         <div class="service-icon">V</div>
-        <h3>Front Desk Assistant — $497/mo + $750 setup</h3>
-        <p>The starting offer. AI voice agent (inbound + outbound) + website chatbot + SMS + email automation + a fully-managed GoHighLevel CRM workspace + pre-built workflows + free website updates. Six tools on one bill. First 25 SMB clients can apply for the Founding Cohort <strong>Local Founder Plan at $297/mo, no setup</strong>. <a href="pricing.html">See full pricing →</a></p>
+        <h3>Front Desk Assistant — affordable monthly plans</h3>
+        <p>The starting offer. AI voice agent (inbound + outbound) + website chatbot + SMS + email automation + a fully-managed GoHighLevel CRM workspace + pre-built workflows + free website updates. Six tools on one bill, sized for small-business budgets. First 25 SMB clients can apply for the Founding Cohort <strong>Local Founder Plan at our lowest rate</strong>. <a href="pricing.html">See how pricing works →</a></p>
         <a href="voice-ai.html" class="service-link">Voice AI deep-dive →</a>
       </article>
       <article class="service-card featured" id="restaurant">
         <div class="service-icon">R</div>
         <h3>Restaurant Phone + Order AI</h3>
-        <p>The phone answers itself. Orders ring into Toast, Square, Clover, Olo, or Aloha. Most restaurants recover $3K–$5K/month in missed orders. Restaurant overlay on top of the $497 Front Desk base — adds POS integration + bilingual EN/ES + menu ingestion: <strong>+$1,500 setup + $599/mo</strong>.</p>
+        <p>The phone answers itself. Orders ring into Toast, Square, Clover, Olo, or Aloha. Most restaurants recover $3K–$5K/month in missed orders. Restaurant overlay on top of the affordable Front Desk base — adds POS integration + bilingual EN/ES + menu ingestion: <strong>Custom quote</strong>.</p>
         <a href="restaurants.html" class="service-link">Restaurant playbook →</a>
       </article>
     </div>
@@ -87,17 +100,17 @@
     <div class="services-grid">
       <article class="service-card" id="dental">
         <div class="service-icon">D</div><h3>Dental overlay</h3>
-        <p>OpenDental, Dentrix, Eaglesoft, iDentalSoft, Curve integration. HIPAA-aware, new-patient intake, recall, insurance verification, emergency triage. Add-on to the $497 Front Desk base: <strong>+$1,500 setup + $999/mo</strong>.</p>
+        <p>OpenDental, Dentrix, Eaglesoft, iDentalSoft, Curve integration. HIPAA-aware, new-patient intake, recall, insurance verification, emergency triage. Add-on to the affordable Front Desk base: <strong>Custom quote</strong>.</p>
         <a href="dental.html" class="service-link">Dental playbook →</a>
       </article>
       <article class="service-card" id="real-estate">
         <div class="service-icon">RE</div><h3>Real Estate</h3>
-        <p>Lead qualification, showing scheduling, Follow Up Boss / kvCORE / HubSpot CRM writes. After-hours coverage that wins the lead. Runs on the standard <strong>$497 Front Desk Assistant</strong> base — no vertical overlay needed.</p>
+        <p>Lead qualification, showing scheduling, Follow Up Boss / kvCORE / HubSpot CRM writes. After-hours coverage that wins the lead. Runs on the standard <strong>affordable Front Desk Assistant</strong> base — no vertical overlay needed.</p>
         <a href="real-estate.html" class="service-link">Real estate playbook →</a>
       </article>
       <article class="service-card" id="healthcare">
         <div class="service-icon">H</div><h3>Healthcare overlay (BAA)</h3>
-        <p>HIPAA-aware deployment with BAA-eligible vendors. EHR-integrated scheduling, recall, intake, refills, behavioral health intake. Add-on to the $497 Front Desk base: <strong>+$2,500 setup + $1,099/mo</strong>.</p>
+        <p>HIPAA-aware deployment with BAA-eligible vendors. EHR-integrated scheduling, recall, intake, refills, behavioral health intake. Add-on to the affordable Front Desk base: <strong>Custom quote</strong>.</p>
         <a href="healthcare.html" class="service-link">Healthcare playbook →</a>
       </article>
     </div>
@@ -111,12 +124,12 @@
     <div class="services-grid">
       <article class="service-card" id="automation">
         <div class="service-icon">W</div><h3>Workflow Automation</h3>
-        <p>Zapier, Make.com, n8n, custom. We pick the tool last, after mapping the actual workflow. Workflow Sprint from $3,500 (single workflow, 2-week delivery). Hourly consulting available at $250–$350/hr.</p>
+        <p>Zapier, Make.com, n8n, custom. We pick the tool last, after mapping the actual workflow. Workflow Sprint Custom quote (single workflow, 2-week delivery). Hourly consulting available — Custom quote.</p>
         <a href="automation.html" class="service-link">Automation deep-dive →</a>
       </article>
       <article class="service-card" id="agents">
         <div class="service-icon">A</div><h3>Custom AI Agents</h3>
-        <p>Multi-step agents on Claude or GPT — that reason, call tools, and decide. Deployed against your CRM, EHR, or proprietary systems. From $8,000.</p>
+        <p>Multi-step agents on Claude or GPT — that reason, call tools, and decide. Deployed against your CRM, EHR, or proprietary systems. Custom quote.</p>
         <a href="contact.html" class="service-link">Scope an agent →</a>
       </article>
       <article class="service-card" id="chatbots">
@@ -150,12 +163,12 @@
     <div class="services-grid">
       <article class="service-card" id="training">
         <div class="service-icon">T</div><h3>AI Training &amp; Workshops</h3>
-        <p>Half-day or full-day, in-person or remote. We train your team to use the AI we deployed — and to recognize when it's giving them bad answers. $2,500 half-day, $4,500 full-day.</p>
+        <p>Half-day or full-day, in-person or remote. We train your team to use the AI we deployed — and to recognize when it's giving them bad answers. Custom quote.</p>
         <a href="contact.html" class="service-link">Book a session →</a>
       </article>
       <article class="service-card" id="audit">
         <div class="service-icon">D</div><h3>AI Readiness Audit</h3>
-        <p>Flat-fee 5-day engagement. We map your processes, pick the three highest-ROI AI opportunities, and quote them. Credited toward a build if you proceed. $2,500 flat.</p>
+        <p>Flat-fee 5-day engagement. We map your processes, pick the three highest-ROI AI opportunities, and quote them. Credited toward a build if you proceed. Custom quote.</p>
         <a href="contact.html" class="service-link">Book an audit →</a>
       </article>
       <article class="service-card" id="caio">
@@ -187,16 +200,26 @@
         <p style="margin-top:1rem;"><a href="tel:+15713323829">(571) 332-3829</a><br/><a href="mailto:parascandconsulting@gmail.com">parascandconsulting@gmail.com</a></p>
       </div>
       <div><h5>Services</h5><ul><li><a href="voice-ai.html">Voice AI Agents</a></li><li><a href="restaurants.html">Restaurant Phone AI</a></li><li><a href="automation.html">Workflow Automation</a></li><li><a href="services.html#caio">Fractional CAIO</a></li><li><a href="services.html">All services →</a></li></ul></div>
-      <div><h5>Verticals</h5><ul><li><a href="restaurants.html">Restaurants</a></li><li><a href="dental.html">Dental</a></li><li><a href="real-estate.html">Real Estate</a></li><li><a href="healthcare.html">Healthcare</a></li></ul></div>
+      <div>
+        <h5>Service Areas</h5>
+        <ul>
+          <li><a href="service-areas.html">Northern Virginia</a></li>
+          <li><a href="service-areas.html">Washington, DC</a></li>
+          <li><a href="service-areas.html">Maryland (MoCo &amp; PG)</a></li>
+          <li><a href="service-areas.html">All DMV areas →</a></li>
+        </ul>
+      </div>
       <div><h5>Firm</h5><ul><li><a href="about.html">About James</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li><li><a href="https://www.linkedin.com/in/james-parascand" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Parascand Consulting LLC.</span><span>Virginia · Remote-first US</span></div>
+    <div class="footer-bottom"><span>© 2026 Parascand Consulting LLC.</span><span>Virginia · DC · Maryland · Remote-first US</span></div>
   </div>
 </footer>
 
 
 <!-- GoHighLevel / LeadConnector chat widget -->
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a1858d7d37f04944ab0b46e" data-source="WEB_USER"></script>
+
+<script src="main.js" defer></script>
 
 </body>
 </html>

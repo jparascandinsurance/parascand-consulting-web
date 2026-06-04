@@ -138,6 +138,94 @@ section.navy a { color: var(--sky-soft); }
 
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
 
+/* shrink header slightly on scroll */
+.site-header.scrolled { box-shadow: var(--shadow-sm); }
+.site-header.scrolled .nav { padding-top: .7rem; padding-bottom: .7rem; }
+
+/* nav link underline animation */
+.nav-menu > a:not(.btn-cta-nav):not(.nav-phone)::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0; height: 2px;
+  background: var(--gold);
+  transition: width .22s ease;
+}
+.nav-menu > a:not(.btn-cta-nav):not(.nav-phone):hover::after { width: 100%; }
+
+/* =========================================================
+   NAV DROPDOWN (Services menu)
+   ========================================================= */
+.nav-item { position: relative; display: flex; align-items: center; }
+.nav-item > a { display: inline-flex; align-items: center; gap: .3rem; }
+.nav-caret { width: 10px; height: 10px; transition: transform .2s ease; }
+.nav-item:hover .nav-caret, .nav-item.open .nav-caret { transform: rotate(180deg); }
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 12px); left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 240px;
+  background: var(--bone);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-lg);
+  padding: .6rem;
+  display: flex; flex-direction: column; gap: 2px;
+  opacity: 0; visibility: hidden;
+  transition: opacity .2s ease, transform .2s ease, visibility .2s;
+  z-index: 200;
+}
+.nav-item:hover .nav-dropdown, .nav-item.open .nav-dropdown {
+  opacity: 1; visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown a {
+  padding: .55rem .85rem;
+  border-radius: var(--r-sm);
+  font-size: .92rem;
+  color: var(--graphite);
+  white-space: nowrap;
+}
+.nav-dropdown a:hover { background: var(--cream); color: var(--navy-deep); }
+.nav-dropdown a::after { display: none; }
+
+/* =========================================================
+   SCROLL REVEAL (added by main.js)
+   ========================================================= */
+html.js .reveal { opacity: 0; transform: translateY(26px); }
+.reveal {
+  transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
+.to-top {
+  position: fixed;
+  bottom: 1.4rem; left: 1.4rem;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--cream);
+  border: none;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-md);
+  opacity: 0; visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity .25s, transform .25s, visibility .25s, background .15s;
+  z-index: 90;
+}
+.to-top.show { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { background: var(--navy-deep); }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal { opacity: 1 !important; transform: none !important; }
+  .reveal { transition: none; }
+}
+
 /* =========================================================
    BUTTONS
    ========================================================= */
@@ -444,6 +532,7 @@ section.navy a { color: var(--sky-soft); }
   border: 1.5px solid var(--line);
   border-radius: var(--r-md);
   padding: 2rem;
+  position: relative;
 }
 .pricing-card.featured {
   background: var(--navy-deep);
@@ -950,5 +1039,128 @@ form.lead-form button { width: 100%; }
 @media (max-width: 600px) {
   .stack-table { font-size: 0.85rem; }
   .stack-table th, .stack-table td { padding: 0.6rem 0.75rem; }
+}
+
+/* =========================================================
+   IMAGE MOTION — Ken Burns drift + hover zoom
+   ========================================================= */
+.vertical-image, .founder-image, .hero-image, .page-hero-image {
+  position: relative;
+  overflow: hidden;
+  animation: kb-drift 26s ease-in-out infinite alternate;
+  will-change: background-position, transform;
+  transition: transform .6s cubic-bezier(.2,.7,.2,1), box-shadow .6s ease;
+}
+@keyframes kb-drift {
+  0%   { background-position: 50% 22%; }
+  100% { background-position: 50% 78%; }
+}
+.founder-image { animation-name: kb-drift-slow; animation-duration: 30s; }
+@keyframes kb-drift-slow {
+  0%   { background-position: 48% 28%; }
+  100% { background-position: 52% 72%; }
+}
+/* hover lift + subtle zoom on the picture blocks */
+.vertical-block:hover .vertical-image,
+.founder-block:hover .founder-image {
+  transform: scale(1.025);
+  box-shadow: var(--shadow-lg);
+}
+/* soft sheen sweep across images on reveal/hover */
+.vertical-image::after, .founder-image::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.22) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform .9s ease;
+  pointer-events: none;
+}
+.vertical-block:hover .vertical-image::after,
+.founder-block:hover .founder-image::after { transform: translateX(120%); }
+
+@media (prefers-reduced-motion: reduce) {
+  .vertical-image, .founder-image, .hero-image, .page-hero-image { animation: none; }
+}
+
+/* =========================================================
+   FREE-OFFER BANNER + PRICING TWEAKS
+   ========================================================= */
+.offer-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 2.5rem auto 0;
+  max-width: 920px;
+}
+.offer-card {
+  background: linear-gradient(180deg, #FFFDF8 0%, #FBF3DF 100%);
+  border: 2px solid var(--gold);
+  border-radius: var(--r-lg);
+  padding: 1.6rem 1.75rem;
+  box-shadow: var(--shadow-md);
+}
+.offer-card .offer-tag {
+  display: inline-block;
+  font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  color: #8B6F2B; margin-bottom: .5rem;
+}
+.offer-card h4 { color: var(--navy-deep); font-size: 1.35rem; margin-bottom: .4rem; }
+.offer-card p { font-size: .95rem; margin-bottom: 0; }
+.pricing-card .price.from {
+  display: flex; align-items: baseline; gap: .35rem;
+}
+.pricing-card .price .from-label {
+  font-family: 'Inter', sans-serif;
+  font-size: .8rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold); align-self: center;
+}
+@media (max-width: 700px) { .offer-banner { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   SERVICE AREAS (DMV) — local SEO
+   ========================================================= */
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.area-card {
+  background: var(--bone);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 1.75rem;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.area-card:hover { border-color: var(--sky); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.area-card h3 { font-size: 1.3rem; margin-bottom: .35rem; }
+.area-card .area-state {
+  font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--rose); display: block; margin-bottom: .75rem;
+}
+.area-card ul { list-style: none; padding: 0; margin: 0; font-size: .92rem; }
+.area-card ul li { padding: .25rem 0; color: var(--graphite); }
+.area-card ul li::before { content: '📍'; margin-right: .45rem; font-size: .8rem; }
+.area-chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+.area-chip {
+  font-size: .8rem; background: var(--cream); color: var(--navy-deep);
+  border: 1px solid var(--line); border-radius: 999px; padding: .3rem .75rem;
+}
+@media (max-width: 900px) { .area-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   MOBILE NAV (dropdown-aware)
+   ========================================================= */
+@media (max-width: 900px) {
+  .nav-menu.open { gap: .25rem; }
+  .nav-item { flex-direction: column; align-items: stretch; width: 100%; }
+  .nav-dropdown {
+    position: static; transform: none; opacity: 1; visibility: visible;
+    box-shadow: none; border: none; background: transparent;
+    min-width: 0; padding: .25rem 0 .5rem 1rem;
+    max-height: 0; overflow: hidden; transition: max-height .3s ease;
+  }
+  .nav-item.open .nav-dropdown { max-height: 520px; }
+  .nav-item:hover .nav-dropdown { opacity: 1; }
 }
 
