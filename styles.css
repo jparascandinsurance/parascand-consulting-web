@@ -192,12 +192,12 @@ section.navy a { color: var(--sky-soft); }
 /* =========================================================
    SCROLL REVEAL (added by main.js)
    ========================================================= */
-html.js .reveal { opacity: 0; transform: translateY(26px); }
+html.js .reveal:not(.is-visible) { opacity: 0; transform: translateY(26px); }
 .reveal {
   transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
   will-change: opacity, transform;
 }
-.reveal.is-visible { opacity: 1; transform: none; }
+.reveal.is-visible, html.js .reveal.is-visible { opacity: 1; transform: none; }
 
 /* =========================================================
    BACK TO TOP
@@ -222,7 +222,7 @@ html.js .reveal { opacity: 0; transform: translateY(26px); }
 .to-top:hover { background: var(--navy-deep); }
 
 @media (prefers-reduced-motion: reduce) {
-  html.js .reveal { opacity: 1 !important; transform: none !important; }
+  html.js .reveal, html.js .reveal:not(.is-visible) { opacity: 1 !important; transform: none !important; }
   .reveal { transition: none; }
 }
 
