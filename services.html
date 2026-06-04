@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 <body>
 
@@ -58,10 +58,25 @@
 </header>
 
 <section class="hero">
-  <div class="container container-narrow" style="text-align:center;">
-    <span class="eyebrow">All services</span>
-    <h1>Eleven services. Two flagships.</h1>
-    <p class="lede">We have repeatable playbooks for each. We refuse engagements where AI isn't the right answer — about 1 in 5 audits ends with us telling the client to fix process first.</p>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">All services</span>
+        <h1>Eleven services. Two flagships.</h1>
+        <p class="lede">We have repeatable playbooks for each. We refuse engagements where AI isn't the right answer — about 1 in 5 audits ends with us telling the client to fix process first.</p>
+        <div class="btn-row">
+          <a href="contact.html" class="btn btn-primary btn-large">Get your free quote</a>
+          <a href="pricing.html" class="btn btn-secondary btn-large">How pricing works</a>
+        </div>
+      </div>
+      <aside class="hero-slideshow" aria-label="Industries we serve" style="background-image:url('images/services-businesses.jpg');">
+        <span style="background-image:url('images/services-businesses.jpg');"></span>
+        <span style="background-image:url('images/restaurant.jpg');"></span>
+        <span style="background-image:url('images/automation.jpg');"></span>
+        <span style="background-image:url('images/real-estate.jpg');"></span>
+        <div class="slide-caption">Restaurants · Trades · Real estate · Practices — one AI front desk.</div>
+      </aside>
+    </div>
   </div>
 </section>
 
@@ -76,7 +91,7 @@
 <section class="cream">
   <div class="container">
     <div class="section-head"><span class="eyebrow">Flagship services</span><h2>What we ship most.</h2></div>
-    <div class="services-grid">
+    <div class="services-grid two">
       <article class="service-card featured" id="voice">
         <div class="service-icon">V</div>
         <h3>Front Desk Assistant — affordable monthly plans</h3>

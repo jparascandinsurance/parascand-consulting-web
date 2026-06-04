@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F3A66'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23C9A961'%3EP%3C/text%3E%3C/svg%3E" />
   <script type="application/ld+json">
   {
@@ -78,72 +78,12 @@
           <a href="contact.html" class="btn btn-secondary btn-large">Get a quote</a>
         </div>
       </div>
-      <aside class="hero-card">
-        <h4>Call analytics dashboard</h4>
-        <!-- Inline SVG: Voice analytics dashboard -->
-        <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Voice analytics dashboard" style="width:100%;height:auto;border-radius:10px;border:1px solid #E5DFD0;background:#FBF7EE;">
-          <rect x="0" y="0" width="600" height="42" fill="#0F3A66"/>
-          <circle cx="18" cy="21" r="4" fill="#C9A961"/>
-          <text x="32" y="26" font-family="Inter,Arial" font-size="13" font-weight="600" fill="#F5EFE2">Parascand Voice Console · Last 7 days</text>
-          <text x="455" y="26" font-family="Inter,Arial" font-size="11" fill="#B7D3E8">All systems green ●</text>
-
-          <!-- stat row -->
-          <g transform="translate(20,60)">
-            <rect width="135" height="60" rx="6" fill="#FFFDF8" stroke="#E5DFD0"/>
-            <text x="12" y="22" font-family="Inter,Arial" font-size="10" font-weight="600" fill="#6B7480" letter-spacing="1">TOTAL CALLS</text>
-            <text x="12" y="48" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#0F3A66">412</text>
-            <text x="80" y="48" font-family="Inter,Arial" font-size="11" fill="#2F6E4F">+18% wk</text>
-          </g>
-          <g transform="translate(165,60)">
-            <rect width="135" height="60" rx="6" fill="#FFFDF8" stroke="#E5DFD0"/>
-            <text x="12" y="22" font-family="Inter,Arial" font-size="10" font-weight="600" fill="#6B7480" letter-spacing="1">BOOKED</text>
-            <text x="12" y="48" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#0F3A66">186</text>
-            <text x="98" y="48" font-family="Inter,Arial" font-size="11" fill="#2F6E4F">45% conv</text>
-          </g>
-          <g transform="translate(310,60)">
-            <rect width="135" height="60" rx="6" fill="#FFFDF8" stroke="#E5DFD0"/>
-            <text x="12" y="22" font-family="Inter,Arial" font-size="10" font-weight="600" fill="#6B7480" letter-spacing="1">AVG HANDLE TIME</text>
-            <text x="12" y="48" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#0F3A66">2m 14s</text>
-          </g>
-          <g transform="translate(455,60)">
-            <rect width="125" height="60" rx="6" fill="#0F3A66"/>
-            <text x="12" y="22" font-family="Inter,Arial" font-size="10" font-weight="600" fill="#B7D3E8" letter-spacing="1">SAVINGS</text>
-            <text x="12" y="48" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#C9A961">$4,860</text>
-          </g>
-
-          <!-- volume chart -->
-          <text x="20" y="148" font-family="Inter,Arial" font-size="11" font-weight="700" fill="#0F3A66" letter-spacing="1.5">CALL VOLUME · BY DAY · LAST 7 DAYS</text>
-          <line x1="20" y1="156" x2="580" y2="156" stroke="#E5DFD0"/>
-          <g>
-            <rect x="40"  y="220" width="48" height="60" fill="#5EA1D1" opacity="0.55"/><rect x="40"  y="200" width="48" height="80" fill="#1B4F8C"/>
-            <rect x="115" y="200" width="48" height="80" fill="#5EA1D1" opacity="0.55"/><rect x="115" y="170" width="48" height="110" fill="#1B4F8C"/>
-            <rect x="190" y="210" width="48" height="70" fill="#5EA1D1" opacity="0.55"/><rect x="190" y="180" width="48" height="100" fill="#1B4F8C"/>
-            <rect x="265" y="225" width="48" height="55" fill="#5EA1D1" opacity="0.55"/><rect x="265" y="195" width="48" height="85" fill="#1B4F8C"/>
-            <rect x="340" y="210" width="48" height="70" fill="#5EA1D1" opacity="0.55"/><rect x="340" y="170" width="48" height="110" fill="#1B4F8C"/>
-            <rect x="415" y="190" width="48" height="90" fill="#5EA1D1" opacity="0.55"/><rect x="415" y="150" width="48" height="130" fill="#1B4F8C"/>
-            <rect x="490" y="200" width="48" height="80" fill="#5EA1D1" opacity="0.55"/><rect x="490" y="165" width="48" height="115" fill="#1B4F8C"/>
-          </g>
-          <g font-family="Inter,Arial" font-size="10" fill="#6B7480" text-anchor="middle">
-            <text x="64" y="295">Mon</text>
-            <text x="139" y="295">Tue</text>
-            <text x="214" y="295">Wed</text>
-            <text x="289" y="295">Thu</text>
-            <text x="364" y="295">Fri</text>
-            <text x="439" y="295">Sat</text>
-            <text x="514" y="295">Sun</text>
-          </g>
-          <g font-family="Inter,Arial" font-size="10" fill="#6B7480">
-            <rect x="20" y="316" width="10" height="10" fill="#1B4F8C"/>
-            <text x="36" y="325">Answered</text>
-            <rect x="120" y="316" width="10" height="10" fill="#5EA1D1" opacity="0.55"/>
-            <text x="136" y="325">Booked / Resolved</text>
-          </g>
-
-          <rect x="0" y="360" width="600" height="40" fill="#0F3A66"/>
-          <text x="20" y="385" font-family="Inter,Arial" font-size="11" font-weight="600" fill="#B7D3E8">Vendor: GoHighLevel · Voice: ElevenLabs · LLM: Claude</text>
-          <text x="445" y="385" font-family="Inter,Arial" font-size="11" fill="#C9A961">Weekly review · Fri 11 AM</text>
-        </svg>
-        <p class="muted" style="font-size:.82rem; margin-top:.85rem;">Sample analytics — every deployment ships with this console.</p>
+      <aside class="hero-slideshow" aria-label="Voice AI for every kind of business" style="background-image:url('images/voice-ai-hero.jpg');">
+        <span style="background-image:url('images/voice-ai-hero.jpg');"></span>
+        <span style="background-image:url('images/restaurant.jpg');"></span>
+        <span style="background-image:url('images/dental.jpg');"></span>
+        <span style="background-image:url('images/services-businesses.jpg');"></span>
+        <div class="slide-caption">Hear it live — call (571) 332-3829 and talk to our agent.</div>
       </aside>
     </div>
   </div>
