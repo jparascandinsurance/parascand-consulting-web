@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Parascand Consulting globe emblem">
+  <defs>
+    <clipPath id="globe"><circle cx="100" cy="100" r="86"/></clipPath>
+    <linearGradient id="w1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fb0dd"/><stop offset="1" stop-color="#4f8ac4"/>
+    </linearGradient>
+    <linearGradient id="w2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f77b8"/><stop offset="1" stop-color="#2b5f9e"/>
+    </linearGradient>
+    <linearGradient id="w3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#204f86"/><stop offset="1" stop-color="#173d6b"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="86" fill="#13294d"/>
+  <g clip-path="url(#globe)">
+    <g fill="#6fa2d2">
+      <!-- North America -->
+      <path d="M46 46 q14 -6 26 -2 q8 3 4 11 q-3 6 -12 6 q4 5 -2 9 q-6 4 -14 1 q-8 -3 -10 -12 q-2 -9 8 -13z"/>
+      <!-- Central + South America -->
+      <path d="M60 74 q7 -2 9 5 q6 -1 8 6 q3 9 -3 20 q-5 10 -12 12 q-5 -10 -2 -22 q2 -9 -3 -15 q-3 -8 5 -6z"/>
+      <!-- Europe -->
+      <path d="M104 48 q10 -3 15 3 q3 5 -3 8 q-7 3 -13 -1 q-5 -4 1 -10z"/>
+      <!-- Africa -->
+      <path d="M108 66 q12 -3 20 6 q6 7 2 16 q-4 10 -14 13 q-8 -3 -12 -13 q-4 -11 2 -20 q1 -5 -0 -4 z"/>
+      <!-- small east landmass -->
+      <path d="M134 60 q7 -1 8 6 q1 6 -6 7 q-6 0 -7 -6 q-1 -6 5 -7z"/>
+    </g>
+    <path d="M-10 120 q40 -20 80 0 t80 0 t80 0 v100 h-320z" fill="url(#w1)"/>
+    <path d="M-10 138 q40 -20 80 0 t80 0 t80 0 v100 h-320z" fill="url(#w2)"/>
+    <path d="M-10 158 q40 -20 80 0 t80 0 t80 0 v100 h-320z" fill="url(#w3)"/>
+    <g fill="none" stroke="#0f2547" stroke-width="3">
+      <path d="M-10 120 q40 -20 80 0 t80 0 t80 0"/>
+      <path d="M-10 138 q40 -20 80 0 t80 0 t80 0"/>
+      <path d="M-10 158 q40 -20 80 0 t80 0 t80 0"/>
+    </g>
+  </g>
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#2a4a7a" stroke-width="2"/>
+</svg>
